@@ -1,0 +1,49 @@
+{{ define "main" }}
+  <p><em>Here's a list of some of my research and other writings. Generally speaking, these have focused on authentication & authorization, Apple and Google platform security (macOS, iOS, Android, Chrome OS), passwordless authentication (<a href="https://www.w3.org/TR/webauthn/">WebAuthn</a>, <a href="https://fidoalliance.org/fido2/">FIDO2</a>), zero trust networks, or a wee bit of applied cryptography. I'm also writing a book called Passwordless Authentication for <a href="https://nostarch.com/">No Starch Press</a>. For more info, feel free to check out my <a href="/downloads/resume.pdf">résumé</a>.</em></p>
+
+  {{ $showResearchList := false }}
+  {{ $researchUrl := "#" }}
+  {{ if .Site.Data.research }}
+    {{ $showResearchList = true }}
+  {{ else if (isset .Site.Params "showResearchList") }}
+    {{ $showResearchList = .Site.Params.ShowResearchList }}
+  {{ end }}
+  {{ if $showResearchList }}
+    {{ if isset .Site.Params "researchUrl" }}
+      {{ $researchUrl = .Site.Params.researchUrl }}
+    {{ end }}
+  {{ end }}
+  <section id="research">
+    <span class="h1"><a href="{{ $researchUrl }}">Research</a></span>
+    <ul class="project-list">
+        {{ range .Site.Data.research.list }}
+        <li class="project-item">
+          {{ .date | markdownify }}: <a href="{{ .url }}">{{ .name }}</a>
+        </li>
+        {{ end }}
+    </ul>
+  </section>
+
+  {{ $showWritingsList := false }}
+  {{ $writingsUrl := "#" }}
+  {{ if .Site.Data.writings }}
+    {{ $showWritingsList = true }}
+  {{ else if (isset .Site.Params "showWritingsList") }}
+    {{ $showWritingsList = .Site.Params.ShowWritingsList }}
+  {{ end }}
+  {{ if $showWritingsList }}
+    {{ if isset .Site.Params "writingsUrl" }}
+      {{ $writingsUrl = .Site.Params.writingsUrl }}
+    {{ end }}
+  {{ end }}
+  <section id="writings">
+    <span class="h1"><a href="{{ $writingsUrl }}">Other Writings</a></span>
+    <ul class="project-list">
+        {{ range .Site.Data.writings.list }}
+        <li class="project-item">
+          {{ .date | markdownify }}: <a href="{{ .url }}">{{ .name }}</a>
+        </li>
+        {{ end }}
+    </ul>
+  </section>
+{{ end }}

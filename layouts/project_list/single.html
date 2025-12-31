@@ -1,0 +1,26 @@
+{{ define "main" }}
+  {{ $showProjectsList := false }}
+  {{ $projectsUrl := "#" }}
+  {{ if .Site.Data.projects }}
+    {{ $showProjectsList = true }}
+  {{ else if (isset .Site.Params "showProjectsList") }}
+    {{ $showProjectsList = .Site.Params.ShowProjectsList }}
+  {{ end }}
+  {{ if $showProjectsList }}
+    {{ if isset .Site.Params "projectsUrl" }}
+      {{ $projectsUrl = .Site.Params.projectsUrl }}
+    {{ end }}
+  {{ end }}
+  <section id="projects">
+    <span class="h1"><a href="{{ $projectsUrl }}">Projects</a></span>
+    <p><em>This is a non-exhaustive list of some projects that I've worked on over the years. For more info, and to see the projects (and products) that I've worked on at various companies, check out my <a href="/downloads/resume.pdf">résumé</a>.</em></p>
+    <p>&nbsp;</p>
+    <ul class="project-list">
+        {{ range .Site.Data.projects.list }}
+        <li class="project-item">
+          <a href="{{ .url }}">{{ .name }}</a>: {{ .desc | markdownify }}
+        </li>
+        {{ end }}
+    </ul>
+  </section>
+{{ end }}

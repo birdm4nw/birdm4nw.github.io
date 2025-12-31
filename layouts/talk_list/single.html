@@ -1,0 +1,38 @@
+{{ define "main" }}
+  {{ $talksUrl := "#" }}
+  {{ if isset .Site.Params "talksUrl" }}
+    {{ $talksUrl = .Site.Params.talksUrl }}
+  {{ end }}
+  <section id="talks">
+    <span class="h1"><a href="{{ $talksUrl }}">Talks</a></span>
+    <p><em>I've been fortunate enough to speak at various IT and security conferences around the world. I've listed most of these below, along with links to the accompanying slides, videos, white papers, and code.</em></p>
+    <p>&nbsp;</p>
+    <ul class="project-list">
+        {{ $len := (len .Site.Data.talks.list) }}
+        {{ range $index, $element := .Site.Data.talks.list }}
+        {{ $s := slice }}
+        {{ with .slides_url }}
+            {{ $s = $s | append (printf "<a href=\"%s\">Slides</a>" .) }}
+        {{ end }}
+        {{ with .video_url }}
+            {{ $s = $s | append (printf "<a href=\"%s\">Video</a>" .) }}
+        {{ end }}
+        {{ with .whitepaper_url }}
+            {{ $s = $s | append (printf "<a href=\"%s\">White Paper</a>" .) }}
+        {{ end }}
+        {{ with .code_url }}
+            {{ $s = $s | append (printf "<a href=\"%s\">Code</a>" .) }}
+        {{ end }}
+        <li class="project-item">
+            {{ .date | markdownify }} - 
+            <strong>
+                {{ with .conference_url }}<a href="{{ . }}">{{ end }}{{ .conference | markdownify }}{{ with .conference_url }}</a>{{ end }}
+            </strong> - {{ .location | markdownify }} - 
+            {{ with .url }}<a href="{{ . }}">{{ end }}{{ .title | markdownify }}{{ with .url }}</a>{{ end }} 
+            ({{ delimit $s ", " | safeHTML }})
+        </li>
+        {{ if lt (add $index 1) $len }}<hr></hr>{{ end }}
+        {{ end }}
+    </ul>
+  </section>
+{{ end }}
