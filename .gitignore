@@ -1,0 +1,10 @@
+/public
+/resources
+
+.DS_Store
+Thumbs.db
+
+*.log
+*.tmp
+
+node_modules/
