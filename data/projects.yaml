@@ -2,20 +2,20 @@ list:
   - name: "IoT security application based on artificial vision"
     desc: "IoT application that aims to provide monitoring and alert of events in real time captured by an IP camera and a motion sensor to secure private and public spaces.\n\n**Features:** Event Logging, incident response, data encoding.\n**Protocols:** RSTP, HTTP"
     tags: ["Python", "C++", "JS", "Java"]
-    url: "#"
+    url: "https://github.com/birdm4nw/security_app"
     btn_text: "Get Code"
     image: ""
 
   - name: "Cybersecurity Home Lab for monitoring & detection"
     desc: "This small-scale environment is designed to simulate real-world IT operations and their components within an enterprise network.\n\n**Services:** DNS, DHCP, RDP, LDAP & VPN.\n**Tools:** Vulnerability scanners, SIEM solutions, firewalls."
     tags: ["Networking", "Virtualization", "Security"]
-    url: "#"
+    url: "https://github.com/birdm4nw/Cybersecurity-HomeLab"
     btn_text: "Documentation"
     image: ""
 
   - name: "Command line tool for secure encryption & decryption"
     desc: "A command-line tool for securely encrypting and decrypting files using AES algorithm, ensuring the CIA triad and offering the option to store encrypted files in a database.\n\n**Features:** Encryption, decryption, shredding, cloud storage."
     tags: ["Python", "MongoDB", "AES", "CLI"]
-    url: "#"
+    url: "https://github.com/birdm4nw/cipherty"
     btn_text: "Get Code"
     image: ""

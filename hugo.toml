@@ -49,10 +49,10 @@ enableGitInfo = true
     link = "https://github.com/birdm4nw"
   [[params.social]]
     name = "linkedin"
-    link = "https://linkedin.com/in/your-linkedin-user" # Placeholder as original just had a comment/variable
+    link = "https://www.linkedin.com/in/davidfgut" # Placeholder as original just had a comment/variable
   [[params.social]]
     name = "email"
-    link = "mailto:your-email@example.com"
+    link = "mailto:d4vcold01@protonmail.com"
   
 
 
