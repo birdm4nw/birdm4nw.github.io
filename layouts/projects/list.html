@@ -9,7 +9,7 @@
             <div class="project-card">
                 <div>
                     <h3 class="project-title">{{ .name }}</h3>
-                    <p class="project-description">{{ .desc }}</p>
+                    <div class="project-description">{{ .desc | markdownify }}</div>
                     {{ if .tags }}
                     <div class="project-tags">
                         {{ range .tags }}
@@ -19,7 +19,7 @@
                     {{ end }}
                 </div>
                 {{ if .url }}
-                <a href="{{ .url }}" target="_blank" class="project-link">View on GitHub</a>
+                <a href="{{ .url }}" target="_blank" class="project-link">{{ .btn_text | default "View on GitHub" }}</a>
                 {{ end }}
             </div>
             {{ end }}
