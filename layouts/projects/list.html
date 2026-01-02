@@ -1,6 +1,8 @@
 {{ define "main" }}
 <div class="post">
-    <h2 class="post-title project-page-title" style="color: #2014ED !important;">{{ .Title }}</h2>
+    <h2 class="post-title project-page-title"
+        style="color: #2014ED !important; display: inline-block; background: linear-gradient(to top, #ffe100 50%, transparent 50%); padding: 0 5px;">
+        {{ .Title }}</h2>
     <div class="post-content">
         {{ .Content }}
 
