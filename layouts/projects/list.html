@@ -1,0 +1,34 @@
+{{ define "main" }}
+<div class="post">
+    <h2 class="post-title">{{ .Title }}</h2>
+    <div class="post-content">
+        {{ .Content }}
+
+        <div class="projects-container">
+            {{ range site.Data.projects }}
+            <div class="project-card">
+                <div>
+                    <h3 class="project-title">{{ .title }}</h3>
+                    <p class="project-description">{{ .description }}</p>
+                    {{ if .tags }}
+                    <div class="project-tags">
+                        {{ range .tags }}
+                        <span class="project-tag">{{ . }}</span>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                </div>
+                {{ if .github }}
+                <a href="{{ .github }}" target="_blank" class="project-link">View on GitHub</a>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+
+    </div>
+    <div class="post-footer">
+        {{ partial "post/actions_desktop.html" . }}
+        {{ partial "post/actions_mobile.html" . }}
+    </div>
+</div>
+{{ end }}
