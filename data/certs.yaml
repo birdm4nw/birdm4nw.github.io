@@ -10,9 +10,9 @@
   url: "#" 
   date: "2025"
 
-- name: "ICCA"
-  issuer: "INE"
-  image: "/images/certs/icca.png"
+- name: "Ethical Hacker"
+  issuer: "Cisco"
+  image: "/images/certs/cisco-ethical-hacker.png"
   url: "#"
   date: "2025"
 
@@ -28,8 +28,9 @@
   url: "#"
   date: "2025"
 
-- name: "Ethical Hacker"
-  issuer: "Cisco"
-  image: "/images/certs/cisco-ethical-hacker.png"
+- name: "ICCA"
+  issuer: "INE"
+  image: "/images/certs/icca.png"
   url: "#"
   date: "2025"
+
