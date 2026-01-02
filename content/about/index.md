@@ -8,7 +8,7 @@ layout = "about"
 
 <h1 style="font-size: 12pt;">$whoami</h1>
 <p>
-  Hi. I'm <strong>David</strong>. I work in <strong>security</strong>.
+  Hi. I'm <strong>David</strong>. I'm a <strong>cybersecurity</strong> enthusiast.
 </p>
 <p>
   I enjoy solving problems, building secure systems, and understanding how things break.
