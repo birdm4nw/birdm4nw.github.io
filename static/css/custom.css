@@ -1,16 +1,13 @@
-.content a:hover {
-    color: #cc2a41;
-    font-weight: bold;
-}
+/* Custom CSS */
 
-@media (min-width: 480px) {
-    .article-read-time,
-    .article-tag,
-    .article-category {
-        display: inline;
-
-        &:before {
-            content: "|";
-      }
-    }
+/* Standardized Highlight Title for Sections (About, Blog, Projects) */
+.section-highlight-title {
+    color: #2014ED !important;
+    display: inline-block;
+    background-color: #ffe100;
+    padding: 0 5px;
+    font-size: 2rem !important;
+    /* Force consistent size */
+    line-height: 1.2;
+    margin-bottom: 2rem;
 }
