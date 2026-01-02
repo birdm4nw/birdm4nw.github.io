@@ -45,6 +45,9 @@
 </section>
 
 <section id="writing">
+  <span class="h1"><a href="{{ .Site.Params.mainSection | absURL }}" class="section-highlight-title">{{
+      .Site.Params.mainSectionTitle | default "Blog"
+      }}</a></span>
   {{ if (and (and (isset .Site.Params "tagsoverview") (eq .Site.Params.tagsOverview true)) (gt (len
   .Site.Taxonomies.tags) 0)) }}
   <span class="h2">Topics</span>
@@ -110,6 +113,7 @@
 {{ $projectsUrl = .Site.Params.projectsUrl }}
 {{ end }}
 <section id="projects">
+  <span class="h1"><a href="{{ $projectsUrl }}" class="section-highlight-title">Projects</a></span>
   <ul class="project-list">
     {{ range .Site.Data.projects.list }}
     <li class="project-item">
