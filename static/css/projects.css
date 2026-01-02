@@ -85,3 +85,8 @@ body.dark .project-tag {
     color: #2014ED;
     opacity: 0.8;
 }
+
+/* Specific fix for /projects/ page title */
+.project-page-title {
+    color: #2014ED !important;
+}
