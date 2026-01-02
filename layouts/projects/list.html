@@ -4,37 +4,27 @@
     <div class="post-content">
         {{ .Content }}
 
-        <div class="projects-container">
+        <ul class="projects-list">
             {{ range site.Data.projects.list }}
-            {{ if .url }}
-            <a href="{{ .url }}" target="_blank" class="project-card full-width">
-                <div class="project-info">
-                    <h3 class="project-title">{{ .name }}</h3>
-                    {{ if .tags }}
-                    <div class="project-tags">
-                        {{ range .tags }}
-                        <span class="project-tag">{{ . }}</span>
-                        {{ end }}
-                    </div>
+            <li class="project-item">
+                <span class="project-title-wrapper">
+                    {{ if .url }}
+                    <a href="{{ .url }}" target="_blank" class="project-link">{{ .name }}</a>
+                    {{ else }}
+                    <span class="project-name">{{ .name }}</span>
                     {{ end }}
-                </div>
-            </a>
-            {{ else }}
-            <div class="project-card full-width">
-                <div class="project-info">
-                    <h3 class="project-title">{{ .name }}</h3>
-                    {{ if .tags }}
-                    <div class="project-tags">
-                        {{ range .tags }}
-                        <span class="project-tag">{{ . }}</span>
-                        {{ end }}
-                    </div>
+                </span>
+
+                {{ if .tags }}
+                <span class="project-tags-inline">
+                    {{ range .tags }}
+                    <span class="project-tag">#{{ . }}</span>
                     {{ end }}
-                </div>
-            </div>
+                </span>
+                {{ end }}
+            </li>
             {{ end }}
-            {{ end }}
-        </div>
+        </ul>
 
     </div>
     <div class="post-footer">

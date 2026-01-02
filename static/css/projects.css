@@ -1,87 +1,53 @@
-/* Minimalist Blue Projects Section - Full Width List */
-.projects-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 2rem 0;
+/* Minimalist Blue Projects Section - Bullet List */
+.projects-list {
+    margin-top: 2rem;
+    list-style-type: disc;
+    /* Standard bullets */
+    padding-left: 1.5rem;
+    line-height: 1.8;
 }
 
-.project-card {
-    display: block;
-    width: 100%;
-    padding: 1rem 1.5rem;
-    border: 1px solid #e0e0e0;
-    border-radius: 6px;
-    background-color: transparent;
-    text-decoration: none;
-    transition: all 0.2s ease;
+.project-item {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
 }
 
-.project-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-/* User requirement: Title size 11-13pt (approx 0.9rem - 1.1rem), Blue color (#2014ED) */
-.project-card .project-title {
-    margin: 0;
+.project-link,
+.project-name {
     font-size: 1.1rem;
     /* ~13pt */
-    font-weight: 600;
     color: #2014ED;
-    /* Explicit blue as requested */
+    text-decoration: none;
+    font-weight: 500;
     transition: opacity 0.2s ease;
 }
 
-/* Hover Effects */
-.project-card:hover {
-    border-color: #2014ED;
-    box-shadow: 0 2px 8px rgba(32, 20, 237, 0.08);
-    /* Subtle shadow */
-    transform: translateY(-2px);
-    text-decoration: none;
-}
-
-.project-card:hover .project-title {
+.project-link:hover {
+    text-decoration: underline;
     opacity: 0.8;
-    /* Slight interaction effect since it's already blue */
+    color: #2014ED !important;
+    background-color: transparent !important;
 }
 
-/* Tags Styling */
-.project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+.project-tags-inline {
+    margin-left: 0.8rem;
+    font-size: 0.85rem;
+    color: #777;
 }
 
 .project-tag {
-    font-size: 0.75rem;
-    color: #666;
+    margin-right: 0.4rem;
+    color: #777;
+    background: none;
+    padding: 0;
     font-family: var(--font-family-mono, monospace);
-    background-color: #f0f0f0;
-    padding: 0.1rem 0.5rem;
-    border-radius: 4px;
 }
 
 /* Dark Mode Overrides */
-body.dark .project-card {
-    border-color: #444;
-}
-
-body.dark .project-card:hover {
-    border-color: #2014ED;
-    background-color: rgba(32, 20, 237, 0.05);
-}
-
-body.dark .project-tag {
-    background-color: #333;
+body.dark .project-tags-inline {
     color: #aaa;
 }
 
-/* Mobile: Ensure alignment */
-@media (max-width: 480px) {
-    .project-card {
-        padding: 1rem;
-    }
+body.dark .project-tag {
+    color: #888;
 }
