@@ -7,7 +7,15 @@
         <div class="projects-container">
             {{ range site.Data.projects.list }}
             <div class="project-card">
-                <div>
+                <div class="project-image-container">
+                    {{ if .image }}
+                    <img src="{{ .image }}" alt="{{ .name }}" class="project-image">
+                    {{ else }}
+                    <!-- Placeholder icon if no image -->
+                    <span style="font-size: 2rem; color: #ccc;">Code</span>
+                    {{ end }}
+                </div>
+                <div class="project-details">
                     <h3 class="project-title">{{ .name }}</h3>
                     <div class="project-description">{{ .desc | markdownify }}</div>
                     {{ if .tags }}
@@ -17,10 +25,12 @@
                         {{ end }}
                     </div>
                     {{ end }}
+
+                    {{ if .url }}
+                    <a href="{{ .url }}" target="_blank" class="project-link">{{ .btn_text | default "View on GitHub"
+                        }}</a>
+                    {{ end }}
                 </div>
-                {{ if .url }}
-                <a href="{{ .url }}" target="_blank" class="project-link">{{ .btn_text | default "View on GitHub" }}</a>
-                {{ end }}
             </div>
             {{ end }}
         </div>
