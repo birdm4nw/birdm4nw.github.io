@@ -45,7 +45,9 @@
 </section>
 
 <section id="writing">
-  <span class="h1"><a href="{{ .Site.Params.mainSection | absURL }}">{{ .Site.Params.mainSectionTitle | default "Blog"
+  <span class="h1"><a href="{{ .Site.Params.mainSection | absURL }}"
+      style="color: #2014ED !important; display: inline-block; background-color: #ffe100; padding: 0 5px;">{{
+      .Site.Params.mainSectionTitle | default "Blog"
       }}</a></span>
   {{ if (and (and (isset .Site.Params "tagsoverview") (eq .Site.Params.tagsOverview true)) (gt (len
   .Site.Taxonomies.tags) 0)) }}
