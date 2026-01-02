@@ -8,7 +8,7 @@ layout = "about"
 
 
 
-# Certifications / Credentials
+<h1 style="font-size: 12pt;">Certifications / Credentials</h1>
 {{< certs >}}
 
 Learn more and contribute on [GitHub](https://github.com/birdm4nw).
