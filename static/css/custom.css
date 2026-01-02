@@ -6,8 +6,8 @@
     display: inline-block;
     background-color: #ffe100;
     padding: 0 5px;
-    font-size: 2rem !important;
-    /* Force consistent size */
+    font-size: 12pt !important;
+    /* Reduced to 12pt as requested */
     line-height: 1.2;
     margin-bottom: 2rem;
 }
