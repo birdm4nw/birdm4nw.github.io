@@ -75,3 +75,13 @@ body.dark .project-tag {
     /* Keep brand color */
     color: #fff;
 }
+
+/* Specific fix for Projects section title */
+#projects .h1 a {
+    color: #2014ED;
+}
+
+#projects .h1 a:hover {
+    color: #2014ED;
+    opacity: 0.8;
+}
