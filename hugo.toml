@@ -1,6 +1,6 @@
 baseURL = "https://birdm4nw.github.io/"
 languageCode = "en"
-title = "David Gutiérrez | Cybersecurity Enthusiast"
+title = "David | Cybersecurity Enthusiast"
 theme = "cactus"
 
 [pagination]
