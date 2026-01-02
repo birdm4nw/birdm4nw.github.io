@@ -1,45 +1,67 @@
-/* Minimalist Blue Projects Section - Title Only Grid */
+/* Minimalist Blue Projects Section - Full Width List */
 .projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     padding: 2rem 0;
 }
 
 .project-card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 120px;
-    padding: 1.5rem;
+    display: block;
+    width: 100%;
+    padding: 1rem 1.5rem;
     border: 1px solid #e0e0e0;
-    border-radius: 8px;
+    border-radius: 6px;
     background-color: transparent;
     text-decoration: none;
     transition: all 0.2s ease;
-    text-align: center;
 }
 
-/* Make sure the title inherits color and styling correctly within the link */
+.project-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* User requirement: Title size 11-13pt (approx 0.9rem - 1.1rem), Blue color (#2014ED) */
 .project-card .project-title {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    /* ~13pt */
     font-weight: 600;
-    color: inherit;
-    /* Inherits from body text initially */
-    transition: color 0.2s ease;
+    color: #2014ED;
+    /* Explicit blue as requested */
+    transition: opacity 0.2s ease;
 }
 
 /* Hover Effects */
 .project-card:hover {
     border-color: #2014ED;
-    box-shadow: 0 4px 12px rgba(32, 20, 237, 0.1);
-    transform: translateY(-3px);
+    box-shadow: 0 2px 8px rgba(32, 20, 237, 0.08);
+    /* Subtle shadow */
+    transform: translateY(-2px);
     text-decoration: none;
 }
 
 .project-card:hover .project-title {
-    color: #2014ED;
+    opacity: 0.8;
+    /* Slight interaction effect since it's already blue */
+}
+
+/* Tags Styling */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.project-tag {
+    font-size: 0.75rem;
+    color: #666;
+    font-family: var(--font-family-mono, monospace);
+    background-color: #f0f0f0;
+    padding: 0.1rem 0.5rem;
+    border-radius: 4px;
 }
 
 /* Dark Mode Overrides */
@@ -49,14 +71,17 @@ body.dark .project-card {
 
 body.dark .project-card:hover {
     border-color: #2014ED;
-    box-shadow: 0 4px 12px rgba(32, 20, 237, 0.2);
     background-color: rgba(32, 20, 237, 0.05);
-    /* Slight tint on hover */
 }
 
-/* Mobile Responsiveness */
+body.dark .project-tag {
+    background-color: #333;
+    color: #aaa;
+}
+
+/* Mobile: Ensure alignment */
 @media (max-width: 480px) {
-    .projects-container {
-        grid-template-columns: 1fr;
+    .project-card {
+        padding: 1rem;
     }
 }

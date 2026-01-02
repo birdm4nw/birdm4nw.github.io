@@ -7,12 +7,30 @@
         <div class="projects-container">
             {{ range site.Data.projects.list }}
             {{ if .url }}
-            <a href="{{ .url }}" target="_blank" class="project-card simple-box">
-                <h3 class="project-title">{{ .name }}</h3>
+            <a href="{{ .url }}" target="_blank" class="project-card full-width">
+                <div class="project-info">
+                    <h3 class="project-title">{{ .name }}</h3>
+                    {{ if .tags }}
+                    <div class="project-tags">
+                        {{ range .tags }}
+                        <span class="project-tag">{{ . }}</span>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                </div>
             </a>
             {{ else }}
-            <div class="project-card simple-box">
-                <h3 class="project-title">{{ .name }}</h3>
+            <div class="project-card full-width">
+                <div class="project-info">
+                    <h3 class="project-title">{{ .name }}</h3>
+                    {{ if .tags }}
+                    <div class="project-tags">
+                        {{ range .tags }}
+                        <span class="project-tag">{{ . }}</span>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                </div>
             </div>
             {{ end }}
             {{ end }}
