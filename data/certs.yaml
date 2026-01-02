@@ -27,3 +27,9 @@
   image: "/images/certs/az-900.png"
   url: "#"
   date: "2025"
+
+- name: "Ethical Hacker"
+  issuer: "Cisco"
+  image: "/images/certs/cisco-ethical-hacker.png"
+  url: "#"
+  date: "2025"
