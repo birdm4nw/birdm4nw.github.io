@@ -9,7 +9,7 @@ categories = ["Write-ups", "CTF"]
 externalLink = ""
 series = []
 +++
-
+![PrivEsc Diagram](/images/posts/buster-hackmyvm-ctf-write-up/buster-diagram.png)
 **Buster** is an interesting easy-difficulty Linux machine on the HMV platform, which involves the following sceneries and techniques:
 
 *   Web reconnaissance
