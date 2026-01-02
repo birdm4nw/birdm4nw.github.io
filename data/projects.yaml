@@ -1,11 +1,12 @@
-- title: "Personal Blog"
-  description: "A customized Hugo blog using the Cactus theme, featuring a dark mode, minimalist design, and custom certification section."
-  tags: ["Hugo", "SCSS", "HTML"]
-  github: "https://github.com/birdm4nw/birdm4nw.github.io"
-  image: ""
+list:
+  - name: "Personal Blog"
+    desc: "A customized Hugo blog using the Cactus theme, featuring a dark mode, minimalist design, and custom certification section."
+    tags: ["Hugo", "SCSS", "HTML"]
+    url: "https://github.com/birdm4nw/birdm4nw.github.io"
+    image: ""
 
-- title: "Cybersecurity HomeLab"
-  description: "A local homelab setup for practicing penetration testing, network monitoring, and security analysis."
-  tags: ["Networking", "Security", "Virtualization"]
-  github: "#"
-  image: ""
+  - name: "Cybersecurity HomeLab"
+    desc: "A local homelab setup for practicing penetration testing, network monitoring, and security analysis."
+    tags: ["Networking", "Security", "Virtualization"]
+    url: "#"
+    image: ""

@@ -5,11 +5,11 @@
         {{ .Content }}
 
         <div class="projects-container">
-            {{ range site.Data.projects }}
+            {{ range site.Data.projects.list }}
             <div class="project-card">
                 <div>
-                    <h3 class="project-title">{{ .title }}</h3>
-                    <p class="project-description">{{ .description }}</p>
+                    <h3 class="project-title">{{ .name }}</h3>
+                    <p class="project-description">{{ .desc }}</p>
                     {{ if .tags }}
                     <div class="project-tags">
                         {{ range .tags }}
@@ -18,8 +18,8 @@
                     </div>
                     {{ end }}
                 </div>
-                {{ if .github }}
-                <a href="{{ .github }}" target="_blank" class="project-link">View on GitHub</a>
+                {{ if .url }}
+                <a href="{{ .url }}" target="_blank" class="project-link">View on GitHub</a>
                 {{ end }}
             </div>
             {{ end }}
@@ -27,8 +27,6 @@
 
     </div>
     <div class="post-footer">
-        {{ partial "post/actions_desktop.html" . }}
-        {{ partial "post/actions_mobile.html" . }}
     </div>
 </div>
 {{ end }}
